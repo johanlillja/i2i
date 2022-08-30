@@ -5,7 +5,7 @@ function [raw_dat,unique_scanheaders] = load_data_mzml(source_files)
 % scan_event variable
     %initialize paralell pool and waitbar
     D = parallel.pool.DataQueue;
-    h = waitbar(0,'Please wait loading mzXML files...');
+    h = waitbar(0,'Please wait loading mzML files...');
     afterEach(D,@nUpdateWaitbar);
     p = 1;    
 raw_dat = cell(length(source_files),1);
