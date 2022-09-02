@@ -70,22 +70,23 @@ comp_masslist=sortrows(comp_masslist);
 i = 2;
 pk = 1;
 c = 1;
-intensity = [];
-mz = [];
+intensity = 0;
+mz = 0;
 pkgroup = {};
 while lt(i,length(comp_masslist))
     
-    intensity = [intensity comp_masslist(i,2)];
-    mz = [mz comp_masslist(i,1)];
-    mz_norm = sum(mz.*(intensity./sum(intensity)));
+    intensity = intensity+comp_masslist(i,2);
+    mz = mz+comp_masslist(i,1)*comp_masslist(i,2);
+      
+    mz_norm = mz/intensity;
     if abs((mz_norm-comp_masslist(i,1))/mz_norm)*1E6<ppmgap
         i = i+1;
     else
         pkgroup{c,1} = pk:1:i-1;
         c = c+1;
         pk=i;
-        intensity = [];
-        mz = [];
+        intensity = 0;
+        mz = 0;
     end
 end
 
