@@ -17,6 +17,7 @@ You also need the image processing toolbox and the parallel computing toolbox in
 Please provide a short description of the problem and try to replicate it yourself before you report it.
 
 In the report provide
-* version of MATLAB
-*
+* Version of MATLAB
+* Copy of the error message
+
 
