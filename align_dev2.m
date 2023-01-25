@@ -29,7 +29,7 @@ switch length(analyte_matrix)>4
             k = time_out>0;
         parfor i = 1:length(analyte_matrix)
             ion_image = analyte_matrix{i};
-
+            
             for j = 1:size(ion_image,1)                
                 time_axis = time_out(j,k(j,:));
                 intensity_value = ion_image(j,k(j,:));

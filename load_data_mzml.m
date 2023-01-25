@@ -30,9 +30,9 @@ parfor k= 1:size(source_files,1)
         precision = '';
         switch double_pres
             case 0
-                precision = 'single'
+                precision = 'single';
             case 1
-                precision = 'double'
+                precision = 'double';
         end
 
 
