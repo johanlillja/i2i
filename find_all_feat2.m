@@ -94,7 +94,7 @@ end
 % Extract data and calculate statisitcs on the peaks in peak groups that
 % are bigger than the threshold min_hits. 
 no_features=size(pkgroup,1);
-mass_stats = zeros(no_features,8);
+mass_stats = zeros(no_features,9);
 for feat=(1:no_features)
     %if size(pkgroup{feat,1},2)/num_scan
         temp_set=comp_masslist(pkgroup{feat,1},:);
@@ -116,6 +116,7 @@ for feat=(1:no_features)
         mass_stats(feat,7)=max(temp_set(:,2));
         %Standard deviation of intensity
         mass_stats(feat,8)=std(temp_set(:,2));
+        mass_stats(feat,9)= size(temp_set,1);
     %end
 end
 
