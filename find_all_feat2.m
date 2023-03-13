@@ -5,11 +5,11 @@
 % 
  
 
-function [masses_out] = find_all_feat2(peak_data,ppmgap,min_hits,time_matrix,region1,intensity_thresh)
+function [masses_out] = find_all_feat2(peak_data,ppmgap,min_hits,time_matrix,region1,intensity_thresh,max_hits,max_int)
 
 
 min_hits = min_hits/100;
-
+max_hits = max_hits/100;
 time_matrix(time_matrix==0)=NaN;
 region_of_interest = cell(length(peak_data),1);
 
@@ -124,4 +124,7 @@ end
 % Remove zero vals from master list.
 masses_out=mass_stats(mass_stats(:,5)>min_hits,:);
 masses_out=masses_out(masses_out(:,6)>intensity_thresh,:);
+
+masses_out=masses_out(masses_out(:,5)<max_hits,:);
+masses_out=masses_out(masses_out(:,6)<max_int,:);
 end

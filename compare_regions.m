@@ -42,8 +42,8 @@ upreg = featurelist1(foldchange_logic,:);
 upreg = [upreg foldchange(foldchange_logic)];
 t_test = (featurelist1(:,6)-featurelist2(:,6))./(sqrt(featurelist1(:,8).^2./featurelist1(:,9)+featurelist2(:,8).^2./featurelist2(:,9)));
 upreg = [upreg t_test(foldchange_logic)];
-upreg = upreg(upreg(:,5)>min_hits,:);
+%upreg = upreg(upreg(:,5)>min_hits,:);
 
-unique_peaks = unique_peaks(unique_peaks(:,5)>min_hits,:);
+%unique_peaks = unique_peaks(unique_peaks(:,5)>min_hits,:);
 unique_peaks = [unique_peaks zeros(size(unique_peaks,1),2)];
 end
