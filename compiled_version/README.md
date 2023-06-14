@@ -42,4 +42,16 @@ The user defines the search space for the non targeted algorithm
 * Min and Max intenisty of the peaks
 * If comparing two regions, fold change
 
+Either load saved ROI masks from the targeted analysis (saved as the 'timestamps' file for ROI analysis) or slide the toggle to Draw ROI mode and define
+a reference ion. Then hit find peaks to start the search with the defined search parameters.
+
+![alt text](https://github.com/johanlillja/i2i/blob/main/compiled_version/figures_manual/figure7.png?raw=true)
+
+After the search has completed the data can be explored in a similar fashion to the targeted analysis with the list on the left of the image and buttons above.
+
+![alt text](https://github.com/johanlillja/i2i/blob/main/compiled_version/figures_manual/figure8.png?raw=true)
+
+Features of interest can be saved to the greyed out list by clicking on the save feature to list button and exported as a .csv.
+
+Metadata from the non-targeted calculations for all detected features can also be exported. 
 
