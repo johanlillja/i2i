@@ -1,4 +1,4 @@
-# i2i <img src="https://github.com/johanlillja/i2i/blob/main/header.png?raw=true" alt="icon" width="100%" height="100%" title="icon">
+# <img src="https://github.com/johanlillja/i2i/blob/main/header.png?raw=true" alt="icon" width="100%" height="100%" title="icon">
 
 Welcome to the development folder for the ion to image (i2i) application and sourcecode.
 
