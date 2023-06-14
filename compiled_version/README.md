@@ -27,3 +27,19 @@ The m/z values have now been loaded and you can change ion image by either click
 Image adjustments, such as changing the color scale, colormap, aspect ratio, colormap, ROI, or normalization can now be done on the loaded data set.
 
 If the user changes mass tolerance or scan filter the Find peaks button needs to be pressed again.
+
+# Non targeted analysis
+
+The non-targeted analysis is accessed through the tab in the left hand corner of the GUI
+
+![alt text](https://github.com/johanlillja/i2i/blob/main/compiled_version/figures_manual/figure6.png?raw=true)
+
+The user defines the search space for the non targeted algorithm
+
+* Scan filter
+* Mass accuracy tolerance
+* Min and Max detection frequency within the defined region
+* Min and Max intenisty of the peaks
+* If comparing two regions, fold change
+
+
