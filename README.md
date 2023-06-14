@@ -1,4 +1,5 @@
 # i2i
+![alt text](https://github.com/johanlillja/i2i/blob/main/icon.png?raw=true)
 Welcome to the development folder for the ion to image (i2i) application and sourcecode.
 
 # What is i2i
