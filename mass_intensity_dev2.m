@@ -1,17 +1,17 @@
 %   Function to extract ion intensites given a mass list MHmass
-%   a tolerence cutoffppm. The input data is generated from the function
-%   loadfiles_dev2.m and is called apeaks.
-%   'fs_time' and a given number of scan events 'NumberOfScans'
+%   and a tolerence cutoffppm. The input data is generated from the function
+%   load_data_mzml.m.
 
-function [analyte_matrix, signal_inten] = mass_intensity_dev2(MHmass,cutoffppm,apeaks,NumberOfScans)
+
+function [analyte_matrix, signal_inten] = mass_intensity_dev2(MHmass,cutoffppm,peak_data,NumberOfScans)
 %   allocate matrices for intensity, closest mass and mass difference.
-all_intensities = cell(length(apeaks),1);
-all_closest_mass =  cell(length(apeaks),1);
-all_mass_diff =  cell(length(apeaks),1);
+all_intensities = cell(length(peak_data),1);
+all_closest_mass =  cell(length(peak_data),1);
+all_mass_diff =  cell(length(peak_data),1);
 
     % Initialize waitbar
     function nUpdateWaitbar(~)
-        waitbar(p/length(apeaks), h);
+        waitbar(p/length(peak_data), h);
         p = p + 1;
     end
 
@@ -25,11 +25,17 @@ switch length(MHmass)>1.5
         h = waitbar(0,'Please wait extracting features...');
         afterEach(D,@nUpdateWaitbar);
         p = 1;
-        parfor i = 1:length(apeaks)
-            linescan_data = apeaks{i};
+
+        % For each line scan initialize matrices for calculating mass
+        % difference, closest mass and intensity value
+        parfor i = 1:length(peak_data)
+            linescan_data = peak_data{i};
             massdiff = zeros(size(MHmass,1),size(linescan_data,1));
             closestmass = zeros(size(MHmass,1),size(linescan_data,1));
-            intensities = zeros(size(MHmass,1),size(linescan_data,1));            
+            intensities = zeros(size(MHmass,1),size(linescan_data,1));
+            % For each scan event in a line scan determine the closest mass
+            % to charge value and store the difference, the actual mass and
+            % intensity
             for j = 1:length(linescan_data)              
                 scan = linescan_data{j};
                 [~, idx1] = min(abs(MHmass - scan(:,1)'),[],2);           
@@ -46,8 +52,8 @@ switch length(MHmass)>1.5
 
         close(h)
     case 0
-        for i = 1:length(apeaks)
-            linescan_data = apeaks{i};
+        for i = 1:length(peak_data)
+            linescan_data = peak_data{i};
             massdiff = zeros(size(MHmass,1),size(linescan_data,1));
             closestmass = zeros(size(MHmass,1),size(linescan_data,1));
             intensities = zeros(size(MHmass,1),size(linescan_data,1));
@@ -65,10 +71,11 @@ switch length(MHmass)>1.5
             
         end
 end
-fs_mass_diff = cell(length(apeaks),1);    
-fs_closest_mass = cell(length(apeaks),1);   
-signal_inten = cell(length(apeaks),1);   
-% Save data if the ppm tolerance is good.
+fs_mass_diff = cell(length(peak_data),1);    
+fs_closest_mass = cell(length(peak_data),1);   
+signal_inten = cell(length(peak_data),1);
+
+% Save data if the ppm tolerance is below the treshold.
 for u = 1:length(all_mass_diff)
    
     tmp_diff = all_mass_diff{u};

@@ -1,7 +1,7 @@
 % Function to find all m/z features from the linescans in the apeaks
 % structure in the defined time regions in the variable region1. The
 % algorithm accounts for mass tolerance (ppmgap), frequency of detection (min_hits)
-% in the given region and scan events (n and m).
+
 % 
  
 
