@@ -1,4 +1,4 @@
-# i2i source code
+# ![alt text](https://github.com/johanlillja/i2i/blob/main/header_source.png?raw=true)
 
 To use the source code and to run the 'Basic_functional_description.mlx' file, please ensure that all functions are in path.
 
