@@ -5,7 +5,7 @@ Welcome to the development folder for the ion to image (i2i) application and sou
 # What is i2i
 
 i2i is an application written in MATLAB for processing of mass spectrometry imaging data sets. The application
-can be run targeted or untargeted data analysis. 
+can be run targeted or untargeted data analysis. It currently supports .mzML files, we recomend Proteowizard MSConvert (https://proteowizard.sourceforge.io/) or ThermoRawFileParserGUI (https://github.com/compomics/ThermoRawFileParserGUI)
 # Requirements
 
 The application is developed with MATLAB 2022a, please use this version when you test the application. There might be conflicts when trying to run the
