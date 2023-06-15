@@ -1,4 +1,4 @@
-# i2i executable
+# ![alt text](https://github.com/johanlillja/i2i/blob/main/header_exe.png?raw=true)
 Install the program through the executable. The installer will automatically install all necessary components needed to run the application. Or run the app from within a MATLAB environment with the appropriate add-ons and source code specified in the path.
 
 # Manual
