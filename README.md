@@ -19,9 +19,13 @@ The live script 'Basic_functional_description.mlx' in the source folder is a liv
 If the source code has been added to path and all required packages are installed it can be executed.
 The live script does not have all quality of life features available in the compiled application.
 
+# Cite
+
+Please cite any use of this software as: 
+
 # Reporting problems
 
-Please file eventual issues under the issues tab on this github. 
+Although we are not supporting the software, please file eventual issues under the issues tab on this github for.
 
 Please provide a short description of the problem and try to replicate it yourself before you report it.
 
