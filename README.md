@@ -1,6 +1,7 @@
 # <img src="https://github.com/johanlillja/i2i/blob/main/header.png?raw=true" alt="icon" width="100%" height="100%" title="icon">
 
-Welcome to the development folder for the ion to image (i2i) application and sourcecode.
+Welcome to the development folder for the ion to image (i2i) application and sourcecode. Here you will find source code
+, a precompiled version of the app, and documentation.
 
 # What is i2i
 
@@ -25,7 +26,7 @@ Please cite any use of this software as:
 
 # Reporting problems
 
-Although we are not supporting the software, please file eventual issues under the issues tab on this github for.
+Although we are not supporting the software, please file eventual issues under the issues tab on this github.
 
 Please provide a short description of the problem and try to replicate it yourself before you report it.
 
