@@ -3,10 +3,26 @@
 Welcome to the development folder for the ion to image (i2i) application and sourcecode. Here you will find source code
 , a precompiled version of the app, and documentation.
 
+# License
+i2i is a free software; you can redistribute it and/or modify it under the terms of the MIT license.
+
+i2i is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ FITNESS FOR A PARTICULAR PURPOSE.
+
 # What is i2i
 
 i2i is an application written in MATLAB for processing of mass spectrometry imaging data sets. The application
-can be run targeted or untargeted data analysis. It currently supports .mzML files, we recomend Proteowizard MSConvert (https://proteowizard.sourceforge.io/) or ThermoRawFileParserGUI (https://github.com/compomics/ThermoRawFileParserGUI)
+can be run targeted or untargeted data analysis. It currently supports .mzML files, 
+we recomend Proteowizard MSConvert (https://proteowizard.sourceforge.io/) or ThermoRawFileParserGUI (https://github.com/compomics/ThermoRawFileParserGUI)
+
+i2i was made to handle complex MSI experiments fast and convenient from an intuitive GUI,
+some features includes:
+* Usage of arbitrarily complex MS experiments (MSn, HCD, SIM, Multiplexing, ...)
+* Alignment of individual line scans based on instrument duty cycle
+* Perform region of interest analysis 
+* Generate high quality figures
+* Process data fast
+
 # Requirements
 
 The application is developed with MATLAB 2022a, please use this version when you test the application. There might be conflicts when trying to run the
