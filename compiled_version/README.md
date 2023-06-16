@@ -18,11 +18,12 @@ The green light indicates that the files have been loaded properly.
 
 Once the data set is loaded the number of files indicator will be updated and so will the available scan filters in the dropdown list.
 
-Start loading a target mass list by clicking the button and navigate to a folder with a spreadsheet with m/z in the first column and optionally putative annotations in the second column. To load a new analyte list hit the ‘reset data’ data button which enables a new analyte list spreadsheet can be loaded. 
+Start loading a target mass list by clicking the button and navigate to a folder with a spreadsheet or .csv file with m/z in the first column and optionally putative annotations in the second column. To load a new analyte list hit the ‘reset data’ data button which enables a new analyte list spreadsheet can be loaded. 
 
 ![alt text](https://github.com/johanlillja/i2i/blob/main/compiled_version/figures_manual/figure3.png?raw=true)
 
 Define the ppm mass tolerance in the ‘Tolerance’ box and select an appropriate scan filter before clicking on the Find Peaks button.
+The algorithm will extract the m/z peak and intensity to the closest value(s) in the defined target list.
 
 ![alt text](https://github.com/johanlillja/i2i/blob/main/compiled_version/figures_manual/figure4.png?raw=true)
 
