@@ -39,7 +39,9 @@ parfor k= 1:size(source_files,1)
         data_out{i,1} = [mz_vec, int_vec];
         data_out{i,2} = file.spectrumList.spectrum(i).scanList.scan.cvParam(1).valueAttribute;
         data_out{i,3} = file.spectrumList.spectrum(i).cvParam(total_ion_current_index).valueAttribute;
-        data_out{i,4} = file.spectrumList.spectrum(i).scanList.scan.cvParam(2).valueAttribute;
+        location_of_scan_filter = [file.spectrumList.spectrum(i).scanList.scan.cvParam.nameAttribute];
+        index_of_scan_filter = find(ismember(location_of_scan_filter,"filter string"));
+        data_out{i,4} = file.spectrumList.spectrum(i).scanList.scan.cvParam(index_of_scan_filter).valueAttribute;
     end
     raw_dat{k}=data_out;
     send(D,i);
