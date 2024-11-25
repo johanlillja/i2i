@@ -13,7 +13,7 @@ i2i is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
 
 i2i is an application written in MATLAB for processing of mass spectrometry imaging data sets. The application
 can be run targeted or untargeted data analysis. It currently supports .mzML files, 
-we recomend Proteowizard MSConvert (https://proteowizard.sourceforge.io/) or ThermoRawFileParserGUI (https://github.com/compomics/ThermoRawFileParserGUI)
+we recommend Proteowizard MSConvert (https://proteowizard.sourceforge.io/) or ThermoRawFileParserGUI (https://github.com/compomics/ThermoRawFileParserGUI)
 
 i2i was made to handle complex MSI experiments fast and convenient from an intuitive GUI,
 some features includes:
